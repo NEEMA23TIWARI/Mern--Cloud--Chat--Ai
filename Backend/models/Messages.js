@@ -1,0 +1,12 @@
+import mongoose from "mongoose";
+const messageSchema=new mongoose.Schema(
+    {
+        sender:String,
+        message:String,
+        timestamps:{type:Date,default:Date.now},
+
+
+    },
+    {timestamps:true}
+);
+export default mongoose.model("Message",messageSchema);
